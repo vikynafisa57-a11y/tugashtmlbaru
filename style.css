@@ -30,12 +30,6 @@ body{
     color:#042277;
 }
 
-.nav-right{
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-}
-
 .search-box{
     padding: 8px 14px;
     border-radius: 20px;
