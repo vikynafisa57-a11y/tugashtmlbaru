@@ -69,16 +69,22 @@
 
         <div class="destination">
             
-            <div class="card">
+            <div class="card"
+                onclick="openModal('Karimun Jawa', 'Pulau Karimunjawa adalah kepulauan di Laut Jawa, Kabupaten Jepara, Jawa Tengah, yang terkenal sebagai taman laut nasional dengan 27 pulau tropis. Destinasi ini menawarkan wisata bahari, snorkeling, pantai pasir putih (Tanjung Gelam, Batu Topeng), dan penangkaran hiu. Akses utama via Pelabuhan Kartini, Jepara, menggunakan feri atau kapal cepat.', 'Karimun Jawa.png')">
+
                 <img src="Karimun Jawa.png">
+
                 <div class="card-info"> 
                     <h4>Karimun Jawa</h4>
                     <p>Jepara, Jawa Tengah</p>    
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" 
+                onclick="openModal('Prambanan','Candi Prambanan merupakan kompleks candi Hindu terbesar di Indonesia. Candi ini memiliki arsitektur megah dan relief cerita Ramayana. Tempat ini juga menjadi situs warisan dunia UNESCO. Sangat cocok untuk wisata sejarah dan budaya.', 'Prambanan.jpg')">
+
                 <img src="Prambanan.jpg">
+
                 <div class="card-info">
                     <h4>Prambanan</h4>
                     <p>Yogyakarta, Jawa Tengah</p>
@@ -141,5 +147,30 @@
                 </div>
             </div>
 
+            <div class="card">
+                <img src="Baturraden.jpg">
+                <div class="card-info">
+                    <h4>Batu Raden</h4>
+                    <p>Banyumas, Jawa Tengah</p>
+                </div>
+            </div>       
+
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <img id="modal-img" src="" alt="">
+
+        <h2 id="modal-title"></h2>
+        <p id="modal-desc"></p>
+
+        <button class="book-now">Book Now</button>
+
+    </div>
+
+<script src="script.js"></script>
 </body>
 </html>
