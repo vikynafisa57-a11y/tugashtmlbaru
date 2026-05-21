@@ -23,7 +23,7 @@
             </div>
         </div>
 
-<div class="hero">
+<<div class="hero">
 
     <video autoplay muted loop playsinline class="bg-video">
         <source src="video.mp4" type="video/mp4">
@@ -32,8 +32,15 @@
     <div class="hero-content">
         <h1>Wonder of Central Java</h1>
         <p>Discover breathtaking Destination and Plan Your Perfect Adventure</p>
-        <button class="explore-btn">Explore Your Destination</button>
+
+        <button class="explore-btn" onclick="toggleMusic()" id="musicBtn">
+            SELAMAT DATANG
+        </button>
     </div>
+
+    <audio id="music" loop>
+        <source src="backsound.mpeg" type="audio/mpeg">
+    </audio>
 
 </div>
 

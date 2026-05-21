@@ -36,3 +36,19 @@ darkBtn.onclick = function () {
     }
 
 };
+
+const music = document.getElementById("music");
+const musicBtn = document.getElementById("musicBtn");
+
+function toggleMusic(){
+
+    if(music.paused){
+        music.play();
+        musicBtn.innerHTML = "SUGENG RAWUH TRAVELERS!";
+    } 
+    
+    else{
+        music.pause();
+        musicBtn.innerHTML = "HI WELCOME TRAVELERS!";
+    }
+}
