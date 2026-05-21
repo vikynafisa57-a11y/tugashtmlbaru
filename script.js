@@ -22,3 +22,17 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+const darkBtn = document.getElementById("darkMode");
+
+darkBtn.onclick = function () {
+
+    document.body.classList.toggle("dark");
+
+    if(document.body.classList.contains("dark")){
+        darkBtn.innerHTML = "☀️";
+    } else {
+        darkBtn.innerHTML = "🌙";
+    }
+
+};
