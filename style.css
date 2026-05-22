@@ -569,3 +569,43 @@ html{
     opacity: 0.8;
     margin-top: 10px;
 }
+
+.event-section{
+    padding: 60px 20px;
+    background: #f8fafc;
+    text-align: center;
+}
+
+.event-section h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.event-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+.event-card{
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.event-card:hover{
+    transform: translateY(-8px);
+}
+
+.event-card h3{
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.event-card p{
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
