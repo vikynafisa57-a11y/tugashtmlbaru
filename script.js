@@ -23,19 +23,6 @@ window.onclick = function(event) {
     }
 }
 
-const darkBtn = document.getElementById("darkMode");
-
-darkBtn.onclick = function () {
-
-    document.body.classList.toggle("dark");
-
-    if(document.body.classList.contains("dark")){
-        darkBtn.innerHTML = "☀️";
-    } else {
-        darkBtn.innerHTML = "🌙";
-    }
-
-};
 
 const music = document.getElementById("music");
 const musicBtn = document.getElementById("musicBtn");
@@ -52,3 +39,23 @@ function toggleMusic(){
         musicBtn.innerHTML = "HI WELCOME TRAVELERS!";
     }
 }
+
+
+function openContact(){
+    document.getElementById("contactModal").style.display = "flex";
+}
+
+function closeContact(){
+    document.getElementById("contactModal").style.display = "none";
+}
+
+
+window.addEventListener("click", function(event){
+
+    let contactModal = document.getElementById("contactModal");
+
+    if(event.target == contactModal){
+        contactModal.style.display = "none";
+    }
+
+});

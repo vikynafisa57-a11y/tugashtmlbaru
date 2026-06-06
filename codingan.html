@@ -17,7 +17,7 @@
                 <a href="#">Home</a>
                 <a href="#">Destination</a>
                 <a href="#">Testimoni</a>
-                <a href="#">Contact</a>
+                <a href="#" onclick="openContact()">Contact</a>
             </div>
         </div>
 
@@ -331,7 +331,9 @@
   </div>
 </section>
 
-<div id="modal" class="modal">
+    </div>
+
+    <div id="modal" class="modal">
     <div class="modal-content">
 
         <span class="close" onclick="closeModal()">&times;</span>
@@ -344,7 +346,32 @@
         <button class="book-now">Book Now</button>
 
     </div>
+</div>
+
+
+        <div id="contactModal" class="contact-modal">
+
+        <div class="contact-content">
+
+        <span class="close-contact" onclick="closeContact()">&times;</span>
+
+        <i class="fa-solid fa-headset"></i>
+
+            <h2>Customer Service</h2>
+
+            <p>📞 +62 812-3456-7890</p>
+            <p>📧 wondercentraljava@gmail.com</p>
+            <p>📍 Central Java, Indonesia</p>
+
+        <a href="https://wa.me/6281234567890" target="_blank">
+            <button class="contact-btn">Chat WhatsApp</button>
+        </a>
+
     </div>
+
+</div>
+
+
 <script src="script.js"></script>
 </body>
 </html>
