@@ -937,3 +937,84 @@ footer{
     color: #60a5fa;
     margin-bottom: 10px;
 }
+
+.add-testimoni{
+    margin-top:50px;
+    background:#f8fafc;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.add-testimoni h2{
+    margin-bottom:25px;
+    color:#1e3a8a;
+}
+
+#testimonialForm{
+    max-width:600px;
+    margin:auto;
+}
+
+#testimonialForm input,
+#testimonialForm textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    font-size:15px;
+    box-sizing:border-box;
+    transition:.3s;
+}
+
+#testimonialForm input:focus,
+#testimonialForm textarea:focus{
+    outline:none;
+    border-color:#3b82f6;
+    box-shadow:0 0 8px rgba(59,130,246,.25);
+}
+
+#testimonialForm button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:14px 30px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+#testimonialForm button:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+.rating-input{
+    display:flex;
+    justify-content:center;
+    flex-direction:row-reverse;
+    gap:8px;
+    margin:20px 0;
+}
+
+.rating-input input{
+    display:none;
+}
+
+.rating-input label{
+    font-size:32px;
+    color:#d1d5db;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.rating-input label:hover,
+.rating-input label:hover ~ label{
+    color:#facc15;
+}
+
+.rating-input input:checked ~ label{
+    color:#facc15;
+}

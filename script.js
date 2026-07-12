@@ -59,3 +59,22 @@ window.addEventListener("click", function(event){
     }
 
 });
+
+document
+.getElementById("testimonialForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const rating =
+        document.querySelector('input[name="rating"]:checked').value;
+
+    alert(
+        "Terima kasih!\n\n" +
+        "Rating : " + rating + " ⭐\n" +
+        "Testimoni berhasil dikirim."
+    );
+
+    this.reset();
+
+});
