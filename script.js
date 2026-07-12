@@ -136,3 +136,81 @@ document.getElementById("testimonialForm").addEventListener("submit", function(e
 
 });
 
+const translations = {
+    en: {
+        home: "Home",
+        destination: "Destination",
+        testimonial: "Testimonials",
+        contact: "Contact",
+
+        heroTitle: "Wonder of Central Java",
+        heroDesc: "Discover breathtaking destinations and plan your perfect adventure.",
+        welcome: "WELCOME TRAVELERS!"
+    },
+
+    id: {
+        home: "Beranda",
+        destination: "Destinasi",
+        testimonial: "Testimoni",
+        contact: "Kontak",
+
+        heroTitle: "Keajaiban Jawa Tengah",
+        heroDesc: "Temukan destinasi menakjubkan dan rencanakan petualangan terbaikmu.",
+        welcome: "SELAMAT DATANG!"
+    },
+
+    es: {
+        home: "Inicio",
+        destination: "Destino",
+        testimonial: "Testimonios",
+        contact: "Contacto",
+
+        heroTitle: "Maravillas de Java Central",
+        heroDesc: "Descubre destinos increíbles y planea tu aventura perfecta.",
+        welcome: "¡BIENVENIDOS!"
+    },
+
+    fr: {
+        home: "Accueil",
+        destination: "Destination",
+        testimonial: "Témoignages",
+        contact: "Contact",
+
+        heroTitle: "Les Merveilles de Java Central",
+        heroDesc: "Découvrez des destinations magnifiques et préparez votre aventure parfaite.",
+        welcome: "BIENVENUE !"
+    },
+
+    jw: {
+        home: "Ngarep",
+        destination: "Papan Wisata",
+        testimonial: "Pangandikan",
+        contact: "Kontak",
+
+        heroTitle: "Kaendahan Jawa Tengah",
+        heroDesc: "Temokna papan wisata sing endah lan rancang lelunganmu.",
+        welcome: "SUGENG RAWUH!"
+    }
+};
+
+function changeLanguage(lang){
+
+    // Navbar
+    document.getElementById("navHome").textContent = translations[lang].home;
+    document.getElementById("navDestination").textContent = translations[lang].destination;
+    document.getElementById("navTestimoni").textContent = translations[lang].testimonial;
+    document.getElementById("navContact").textContent = translations[lang].contact;
+
+    // Hero
+    if(document.getElementById("heroTitle")){
+        document.getElementById("heroTitle").textContent = translations[lang].heroTitle;
+    }
+
+    if(document.getElementById("heroDesc")){
+        document.getElementById("heroDesc").textContent = translations[lang].heroDesc;
+    }
+
+    if(document.getElementById("musicBtn")){
+        document.getElementById("musicBtn").textContent = translations[lang].welcome;
+    }
+}

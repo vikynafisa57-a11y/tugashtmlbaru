@@ -771,7 +771,6 @@ html{
 
 }
 
-
 .card img{
     transition: .4s;
 }
@@ -1076,4 +1075,41 @@ footer{
 .delete-btn:hover{
     background:#dc2626;
     transform:scale(1.05);
+}
+
+#language{
+    padding: 10px 20px;
+    position: relative;
+    color: #1e3a8a;
+    font-size: 15px;
+    font-weight: 600;
+    background: #dbeafe;
+    border: 1px solid #93c5fd;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    text-align: center;
+}
+
+#language:hover{
+    background: #2563eb;
+    color: white;
+    box-shadow: 0 6px 15px rgba(37,99,235,.35);
+    transform: translateY(-2px);
+}
+
+.dark #language{
+    background: #1e293b;
+    color: white;
+    border-color: #475569;
+}
+
+.dark #language:hover{
+    background: #2563eb;
+}
+
+.language a{
+    position: relative;
+    overflow: hidden;
 }

@@ -13,26 +13,38 @@
     <div class="wrapper">
         <div class="navbar">
             <div class="logo"></div>
-            <div class="nav-link">
-                <a href="#home">Home</a>
-                <a href="#destination">Destination</a>
-                <a href="#testimoni">Testimoni</a>
-                <a href="#" onclick="openContact()">Contact</a>
+        <div class="nav-link">
+            <a id="navHome" href="#home">Home</a>
+                <a id="navDestination" href="#destination">Destination</a>
+                <a id="navTestimoni" href="#testimoni">Testimoni</a>
+                <a id="navContact" href="#" onclick="openContact()">Contact</a>
+            
+            <select id="language" onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="id">Indonesia</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="jw">Basa Jawa</option>
+            </select>
             </div>
         </div>
 
-    <div class="hero" id="home">
+        <div class="hero" id="home">
 
         <video autoplay muted loop playsinline class="bg-video">
             <source src="video.mp4" type="video/mp4">
         </video>
 
-        <div class="hero-content">
-            <h1>Wonder of Central Java</h1>
-            <p>Discover breathtaking Destination and Plan Your Perfect Adventure</p>
+       <div class="hero-content">
+            <h1 id="heroTitle">Wonder of Central Java</h1>
+
+            <p id="heroDesc">
+                Discover breathtaking destinations and plan your perfect adventure.
+            </p>
+
             <p class="jawa-text">ꦮꦺꦴꦤ꧀ꦢꦼꦂ​ꦲꦥ꧀​ꦗꦮ​ꦠꦼꦔꦃ</p>
 
-            <button class="explore-btn" onclick="toggleMusic()" id="musicBtn">
+            <button id="musicBtn" class="explore-btn" onclick="toggleMusic()">
                 SELAMAT DATANG
             </button>
         </div>
@@ -41,7 +53,7 @@
             <source src="backsound.mpeg" type="audio/mpeg">
         </audio>
 
-    </div>
+        </div>
 
             <section class="why-us">
                 <h2>Kenapa Memilih Kami</h2>
