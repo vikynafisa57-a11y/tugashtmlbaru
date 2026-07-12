@@ -1050,3 +1050,25 @@ footer{
         transform: translateY(0);
     }
 }
+
+.delete-btn{
+    margin-top:15px;
+    padding:8px 16px;
+    border:none;
+    border-radius:8px;
+    background:#ef4444;
+    color:white;
+    cursor:pointer;
+    font-size:14px;
+    transition:.3s;
+    opacity:0;
+}
+
+.card-testimoni:hover .delete-btn{
+    opacity:1;
+}
+
+.delete-btn:hover{
+    background:#dc2626;
+    transform:scale(1.05);
+}

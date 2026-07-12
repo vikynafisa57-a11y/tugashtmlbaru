@@ -69,8 +69,13 @@ document.getElementById("testimonialForm").addEventListener("submit", function(e
 
     const ratingInput = document.querySelector('input[name="rating"]:checked');
 
-    if(nama === "" || pesan === ""){
-        alert("Silakan isi nama dan testimoni terlebih dahulu!");
+    if(nama === ""){
+        alert("Silakan isi nama terlebih dahulu!");
+        return;
+    }
+
+    if(pesan === ""){
+        alert("Silakan isi testimoni terlebih dahulu!");
         return;
     }
 
@@ -102,12 +107,31 @@ document.getElementById("testimonialForm").addEventListener("submit", function(e
         <p>“${pesan}”</p>
 
         <h4>- ${nama}</h4>
+
+        <button class="delete-btn">
+            <i class="fa-solid fa-trash"></i> Hapus
+        </button>
     `;
 
     document.getElementById("testimoniContainer").prepend(card);
 
-    alert("Terima kasih atas testimoninya!");
+    card.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    card.querySelector(".delete-btn").addEventListener("click", function(){
+
+        if(confirm("Yakin ingin menghapus testimoni ini?")){
+            card.remove();
+        }
+
+    });
 
     this.reset();
+
+    setTimeout(() => {
+        alert("Terima kasih atas testimoninya!");
+    }, 500);
 
 });
