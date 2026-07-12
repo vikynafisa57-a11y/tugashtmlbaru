@@ -1018,3 +1018,35 @@ footer{
 .rating-input input:checked ~ label{
     color:#facc15;
 }
+
+.new-testimoni{
+    animation: muncul .5s ease;
+}
+
+@keyframes muncul{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.new-testimoni{
+    animation: muncul .5s ease;
+}
+
+@keyframes muncul{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

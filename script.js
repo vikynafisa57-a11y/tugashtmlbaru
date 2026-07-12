@@ -60,20 +60,53 @@ window.addEventListener("click", function(event){
 
 });
 
-document
-.getElementById("testimonialForm")
-.addEventListener("submit", function(e){
+document.getElementById("testimonialForm").addEventListener("submit", function(e){
 
     e.preventDefault();
 
-    const rating =
-        document.querySelector('input[name="rating"]:checked').value;
+    const nama = document.getElementById("nama").value.trim();
+    const pesan = document.getElementById("pesan").value.trim();
 
-    alert(
-        "Terima kasih!\n\n" +
-        "Rating : " + rating + " ⭐\n" +
-        "Testimoni berhasil dikirim."
-    );
+    const ratingInput = document.querySelector('input[name="rating"]:checked');
+
+    if(nama === "" || pesan === ""){
+        alert("Silakan isi nama dan testimoni terlebih dahulu!");
+        return;
+    }
+
+    if(!ratingInput){
+        alert("Silakan pilih rating terlebih dahulu!");
+        return;
+    }
+
+    if(!confirm("Yakin ingin mengirim testimoni?")){
+        return;
+    }
+
+    const rating = parseInt(ratingInput.value);
+
+    let stars = "";
+
+    for(let i = 0; i < rating; i++){
+        stars += '<i class="fa-solid fa-star"></i>';
+    }
+
+    const card = document.createElement("div");
+    card.className = "card-testimoni new-testimoni";
+
+    card.innerHTML = `
+        <div class="rating">
+            ${stars}
+        </div>
+
+        <p>“${pesan}”</p>
+
+        <h4>- ${nama}</h4>
+    `;
+
+    document.getElementById("testimoniContainer").prepend(card);
+
+    alert("Terima kasih atas testimoninya!");
 
     this.reset();
 
