@@ -680,3 +680,164 @@ html{
 .contact-btn:hover{
     background: #1ebe5d;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: #e5e7eb;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #3b82f6;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #2563eb;
+}
+
+.wrapper{
+    animation: fadePage 1s ease;
+}
+
+@keyframes fadePage{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1{
+    text-shadow:
+        0 0 10px rgba(255,255,255,.5),
+        0 0 20px rgba(255,255,255,.3);
+}
+
+.nav-link a{
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link a::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 6px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+    transform: translateX(-50%);
+}
+
+.nav-link a:hover::after{
+    width: 70%;
+}
+
+.explore-btn{
+    background: linear-gradient(45deg,#2563eb,#38bdf8);
+    transition: .3s;
+}
+
+.explore-btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(37,99,235,.4);
+}
+
+
+.card{
+    border: 2px solid transparent;
+    transition: .3s;
+}
+
+.card:hover{
+    border-color: #60a5fa;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.18);
+}
+
+
+.card img{
+    transition: .4s;
+}
+
+.card:hover img{
+    transform: scale(1.08);
+}
+
+
+.event-card{
+    transition: .3s;
+}
+
+.event-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,.15);
+}
+
+.card-testimoni{
+    transition: .3s;
+}
+
+.card-testimoni:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,.12);
+}
+
+.modal-content{
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,.92);
+}
+
+.contact-content{
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+}
+
+.section h2,
+.why-us h2,
+.testimoni h2,
+.event-section h2{
+    position: relative;
+    display: inline-block;
+}
+
+.section h2::after,
+.why-us h2::after,
+.testimoni h2::after,
+.event-section h2::after{
+    content: "";
+    width: 60%;
+    height: 4px;
+    background: #3b82f6;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+footer{
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    background: #0f172a;
+    color: white;
+    border-radius: 15px;
+}
