@@ -248,25 +248,27 @@ body{
   to {transform: scale(1); opacity: 1;}
 }
 
-.modal {
+.modal{
     display: none;
     position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
+    inset: 0;
+    z-index: 99999;
+
+    background: rgba(0,0,0,.6);
+
+    justify-content: center;
+    align-items: center;
 }
 
-.modal-content {
+.modal-content{
+    position: relative;
     background: white;
-    margin: 5% auto;
-    padding: 20px;
-    width: 400px;
+    width: 420px;
+    max-width: 90%;
+    padding: 25px;
     border-radius: 15px;
     text-align: center;
-    animation: zoomIn 0.3s ease;
+    animation: zoomIn .3s ease;
 }
 
 #modal-img {
@@ -334,7 +336,7 @@ body{
     gap: 20px;
 }
 
-.card {
+.why-us .card{
     background: white;
     padding: 25px;
     border-radius: 15px;
@@ -357,7 +359,7 @@ body{
     color: #555;
 }
 
-.card:hover {
+.why-us .card:hover{
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
@@ -885,11 +887,11 @@ footer{
     color: #2563eb;
 }
 
-.card{
+.destination .card{
     position: relative;
 }
 
-.card::before{
+.destination .card::before{
     content: "";
     position: absolute;
     inset: 0;
@@ -899,7 +901,7 @@ footer{
     pointer-events: none;
 }
 
-.card:hover::before{
+.destination .card:hover::before{
     opacity: 1;
 }
 
