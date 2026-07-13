@@ -151,3 +151,60 @@ function searchDestination() {
         }
     });
 }
+
+const translations = {
+    en: {
+        home: "Home",
+        destination: "Destination",
+        testimoni: "Testimoni",
+        contact: "Contact",
+        heroTitle: "Wonder of Central Java",
+        heroDesc: "Discover breathtaking destinations and plan your perfect adventure."
+    },
+
+    id: {
+        home: "Beranda",
+        destination: "Destinasi",
+        testimoni: "Testimoni",
+        contact: "Kontak",
+        heroTitle: "Keajaiban Jawa Tengah",
+        heroDesc: "Temukan destinasi menakjubkan dan rencanakan petualangan impianmu."
+    },
+
+    es: {
+        home: "Inicio",
+        destination: "Destino",
+        testimoni: "Testimonios",
+        contact: "Contacto",
+        heroTitle: "Maravillas de Java Central",
+        heroDesc: "Descubre destinos increíbles y planea tu aventura perfecta."
+    },
+
+    fr: {
+        home: "Accueil",
+        destination: "Destination",
+        testimoni: "Témoignages",
+        contact: "Contact",
+        heroTitle: "Les Merveilles de Java Central",
+        heroDesc: "Découvrez des destinations magnifiques et planifiez votre aventure parfaite."
+    },
+
+    jw: {
+        home: "Ngarep",
+        destination: "Panggonan Wisata",
+        testimoni: "Pangandikan",
+        contact: "Kontak",
+        heroTitle: "Kaendahan Jawa Tengah",
+        heroDesc: "Temokna papan wisata sing apik lan rencanakake lelunganmu."
+    }
+};
+
+function changeLanguage(lang) {
+    document.getElementById("navHome").innerText = translations[lang].home;
+    document.getElementById("navDestination").innerText = translations[lang].destination;
+    document.getElementById("navTestimoni").innerText = translations[lang].testimoni;
+    document.getElementById("navContact").innerText = translations[lang].contact;
+
+    document.getElementById("heroTitle").innerText = translations[lang].heroTitle;
+    document.getElementById("heroDesc").innerText = translations[lang].heroDesc;
+}
