@@ -9,7 +9,7 @@ function openModal(title, desc, img, link) {
         window.open(link, "_blank");
     };
 
-    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modal").style.display = "block";
 }
 
 function closeModal() {
@@ -135,3 +135,21 @@ document.getElementById("testimonialForm").addEventListener("submit", function(e
     }, 500);
 
 });
+
+});
+
+function searchDestination() {
+    let input = document.getElementById("searchDestination").value.toLowerCase();
+
+    let cards = document.querySelectorAll(".destination .card");
+
+    cards.forEach(function(card) {
+        let title = card.querySelector("h4").textContent.toLowerCase();
+
+        if (title.includes(input)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
