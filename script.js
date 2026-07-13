@@ -9,7 +9,7 @@ function openModal(title, desc, img, link) {
         window.open(link, "_blank");
     };
 
-    document.getElementById("modal").style.display = "block";
+    document.getElementById("modal").style.display = "flex";
 }
 
 function closeModal() {
@@ -133,8 +133,6 @@ document.getElementById("testimonialForm").addEventListener("submit", function(e
     setTimeout(() => {
         alert("Terima kasih atas testimoninya!");
     }, 500);
-
-});
 
 });
 
