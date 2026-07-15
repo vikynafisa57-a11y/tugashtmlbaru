@@ -115,6 +115,8 @@ document.getElementById("testimonialForm").addEventListener("submit", function(e
 
     document.getElementById("testimoniContainer").prepend(card);
 
+    simpanTestimoni();
+
     card.scrollIntoView({
         behavior: "smooth",
         block: "center"
@@ -124,6 +126,7 @@ document.getElementById("testimonialForm").addEventListener("submit", function(e
 
         if(confirm("Yakin ingin menghapus testimoni ini?")){
             card.remove();
+            simpanTestimoni();
         }
 
     });
@@ -208,3 +211,64 @@ function changeLanguage(lang) {
     document.getElementById("heroTitle").innerText = translations[lang].heroTitle;
     document.getElementById("heroDesc").innerText = translations[lang].heroDesc;
 }
+
+function simpanTestimoni() {
+    const cards = [];
+
+    document.querySelectorAll("#testimoniContainer .new-testimoni").forEach(card => {
+
+        cards.push({
+            nama: card.querySelector("h4").innerText.replace("- ", ""),
+            pesan: card.querySelector("p").innerText.replace(/“|”/g, ""),
+            rating: card.querySelectorAll(".fa-star").length
+        });
+
+    });
+
+    localStorage.setItem("testimoni", JSON.stringify(cards));
+    console.log(localStorage.getItem("testimoni"));
+}
+
+window.addEventListener("DOMContentLoaded", function () {
+
+    const data = JSON.parse(localStorage.getItem("testimoni")) || [];
+
+    data.reverse().forEach(item => {
+
+        let stars = "";
+
+        for (let i = 0; i < item.rating; i++) {
+            stars += '<i class="fa-solid fa-star"></i>';
+        }
+
+        const card = document.createElement("div");
+        card.className = "card-testimoni new-testimoni";
+
+        card.innerHTML = `
+            <div class="rating">
+                ${stars}
+            </div>
+
+            <p>“${item.pesan}”</p>
+
+            <h4>- ${item.nama}</h4>
+
+            <button class="delete-btn">
+                <i class="fa-solid fa-trash"></i> Hapus
+            </button>
+        `;
+
+        document.getElementById("testimoniContainer").prepend(card);
+
+        card.querySelector(".delete-btn").addEventListener("click", function () {
+
+            if (confirm("Yakin ingin menghapus testimoni ini?")) {
+                card.remove();
+                simpanTestimoni();
+            }
+
+        });
+
+    });
+
+});
